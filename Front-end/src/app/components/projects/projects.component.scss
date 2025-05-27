@@ -1,0 +1,19 @@
+:host {
+    display: block;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.p-button-success {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    
+    &:hover {
+        background-color: var(--primary-color-dark);
+        border-color: var(--primary-color-dark);
+    }
+} 

@@ -1,0 +1,185 @@
+.avatar-upload {
+    position: relative;
+    max-width: 150px;
+    margin: 0 auto;
+    
+    .avatar-preview {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--surface-border);
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    .avatar-edit {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 1;
+        
+        input {
+            display: none;
+            
+            + label {
+                display: inline-block;
+                width: 34px;
+                height: 34px;
+                margin-bottom: 0;
+                border-radius: 50%;
+                background: var(--primary-color);
+                border: 1px solid transparent;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                cursor: pointer;
+                font-weight: normal;
+                transition: all 0.2s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                
+                &:hover {
+                    background: var(--primary-color-dark);
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid var(--surface-border);
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out;
+        
+        &:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+        }
+        
+        &.is-invalid {
+            border-color: var(--red-500);
+            
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba(239, 68, 68, 0.25);
+            }
+        }
+    }
+    
+    .invalid-feedback {
+        display: block;
+        color: var(--red-500);
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+}
+
+.form-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        
+        &.btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            
+            &:hover {
+                background-color: var(--primary-color-dark);
+                border-color: var(--primary-color-dark);
+            }
+            
+            &:disabled {
+                opacity: 0.65;
+                cursor: not-allowed;
+            }
+        }
+        
+        &.btn-secondary {
+            background-color: var(--surface-card);
+            border: 1px solid var(--surface-border);
+            color: var(--text-color);
+            
+            &:hover {
+                background-color: var(--surface-hover);
+            }
+        }
+    }
+}
+
+.bredcrumb_wrap {
+    margin-bottom: 2rem;
+    
+    .breadcrumb {
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        
+        .breadcrumb-item {
+            a {
+                color: var(--primary-color);
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            
+            &.active {
+                color: var(--text-color-secondary);
+            }
+        }
+    }
+}
+
+._dashboard_content {
+    background: var(--surface-card);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    ._dashboard_content_header {
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--surface-border);
+        
+        h4 {
+            margin: 0;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            
+            i {
+                margin-right: 0.5rem;
+                color: var(--primary-color);
+            }
+        }
+    }
+    
+    ._dashboard_content_body {
+        padding: 1.5rem;
+    }
+} 

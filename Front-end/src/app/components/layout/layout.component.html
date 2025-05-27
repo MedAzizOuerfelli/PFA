@@ -1,0 +1,36 @@
+<p-toast></p-toast>
+
+<div class="layout-wrapper">
+    <p-sidebar [(visible)]="sidebarVisible" [modal]="true" [style]="{width: '250px'}">
+        <div class="sidebar-content">
+            <div class="user-info" *ngIf="user">
+                <img [src]="user.userPhoto || 'assets/images/default-avatar.png'" alt="User Photo" class="user-photo">
+                <div class="user-details">
+                    <h3>{{ user.name }} {{ user.userLastName }}</h3>
+                    <p>{{ user.userType }}</p>
+                </div>
+            </div>
+
+            <p-menu [model]="menuItems"></p-menu>
+        </div>
+    </p-sidebar>
+
+    <div class="layout-main">
+        <div class="topbar">
+            <button pButton icon="pi pi-bars" (click)="toggleSidebar()" class="menu-button"></button>
+            <div class="topbar-right">
+                <p-dropdown 
+                    [options]="userMenuItems" 
+                    [(ngModel)]="selectedUserMenuItem"
+                    (onChange)="onUserMenuItemSelect($event)"
+                    [style]="{width: '200px'}"
+                    placeholder="User Menu">
+                </p-dropdown>
+            </div>
+        </div>
+
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div> 

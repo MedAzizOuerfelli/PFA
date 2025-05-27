@@ -1,0 +1,88 @@
+   <!-- Log In Modal -->
+
+   <div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+    <div class="modal-content" id="registermodal">
+        <div class="modal-header">
+            <h4>Sign Up</h4>
+
+        </div>
+        <div class="modal-body">
+
+            <div class="login-form">
+                <form [formGroup]="registerForm" (ngSubmit)="createAccount()" >
+                    <!-- Error Message -->
+                    <div class="alert alert-danger" *ngIf="errorMessage">
+                        {{ errorMessage }}
+                    </div>
+
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstname" [ngClass]="{ 'form-control': true, 'error': registerForm.controls['firstname'].touched && registerForm.controls['firstname'].invalid }">
+                        <div class="error-message" *ngIf="registerForm.controls['firstname'].touched && registerForm.controls['firstname'].invalid">
+                            First name is required
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastname" [ngClass]="{ 'form-control': true, 'error': registerForm.controls['lastname'].touched && registerForm.controls['lastname'].invalid }">
+                        <div class="error-message" *ngIf="registerForm.controls['lastname'].touched && registerForm.controls['lastname'].invalid">
+                            Last name is required
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" formControlName="email" [ngClass]="{ 'form-control': true, 'error': registerForm.controls['email'].touched && registerForm.controls['email'].invalid }">
+                        <div class="error-message" *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].invalid">
+                            Please enter a valid email
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>phone</label>
+                        <input type="tel" formControlName="phone" [ngClass]="{ 'form-control': true, 'error': registerForm.controls['phone'].touched && registerForm.controls['phone'].invalid }">
+                        <div class="error-message" *ngIf="registerForm.controls['phone'].touched && registerForm.controls['phone'].invalid">
+                            Phone number is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>location</label>
+                        <input type="text" formControlName="location" [ngClass]="{ 'form-control': true, 'error': registerForm.controls['location'].touched && registerForm.controls['location'].invalid }">
+                        <div class="error-message" *ngIf="registerForm.controls['location'].touched && registerForm.controls['location'].invalid">
+                            Location is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>birthday</label>
+                        <input type="date" formControlName="birthday" [ngClass]="{ 'form-control': true, 'error': registerForm.controls['birthday'].touched && registerForm.controls['birthday'].invalid }">
+                        <div class="error-message" *ngIf="registerForm.controls['birthday'].touched && registerForm.controls['birthday'].invalid">
+                            Birthday is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" [ngClass]="{ 'form-control': true, 'error': registerForm.controls['password'].touched && registerForm.controls['password'].invalid }">
+                        <div class="error-message" *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].invalid">
+                            Password is required and must be at least 6 characters
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" [disabled]="registerForm.invalid" class="btn dark-2 btn-md full-width pop-login">Register</button>
+                    </div>
+
+                </form>
+            </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+            <div class="mf-link"><i class="ti-user"></i>Have An Account?<a routerLink="/login" class="theme-cl">
+                    Sign In</a></div>
+
+        </div>
+    </div>
+</div>
+
+<!-- End Modal -->
