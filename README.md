@@ -1,9 +1,10 @@
 # Freelance Platform
 
-A full-stack freelance platform built with Angular and Node.js, allowing freelancers and clients to connect, manage projects, and handle payments.
+A full-stack freelance platform built with the MEAN stack (MongoDB, Express.js, Angular, Node.js), allowing freelancers and clients to connect, manage projects, and handle payments.
 
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## 🌟 Features
@@ -33,10 +34,11 @@ A full-stack freelance platform built with Angular and Node.js, allowing freelan
 - Angular Material
 - RxJS
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
+### Backend (MEAN Stack)
+- MongoDB - Database
+- Express.js - Web Framework
+- Angular - Frontend Framework
+- Node.js - Runtime Environment
 - JWT Authentication
 - Multer (File Upload)
 
