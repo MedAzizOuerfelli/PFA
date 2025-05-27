@@ -1,53 +1,146 @@
-# Full Stack Application
+# Freelance Platform
 
-This project consists of a frontend Angular application and a backend Node.js API.
+A full-stack freelance platform built with Angular and Node.js, allowing freelancers and clients to connect, manage projects, and handle payments.
 
-## Project Structure
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+
+## 🌟 Features
+
+- **User Authentication**
+  - Secure login and registration
+  - Role-based access control (Freelancer/Client)
+  - Profile management
+
+- **Project Management**
+  - Create and manage projects
+  - Submit and review proposals
+  - Track project progress
+  - Real-time notifications
+
+- **Payment System**
+  - Secure payment processing
+  - Transaction history
+  - Payment status tracking
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Angular 17
+- TypeScript
+- SCSS/CSS
+- Angular Material
+- RxJS
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+- Multer (File Upload)
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v14 or higher)
+- npm (comes with Node.js)
+- MongoDB
+- Angular CLI
+  ```bash
+  npm install -g @angular/cli
+  ```
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/MedAzizOuerfelli/PFA.git
+cd PFA
+```
+
+### 2. Backend Setup
+```bash
+cd Back-end
+npm install
+```
+
+Create a `.env` file in the Back-end directory with the following variables:
+```env
+PORT=3000
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+```
+
+Start the backend server:
+```bash
+npm start
+```
+The backend will run at `http://localhost:3000`
+
+### 3. Frontend Setup
+Open a new terminal:
+```bash
+cd Front-end
+npm install
+```
+
+Start the development server:
+```bash
+ng serve
+```
+The frontend will be available at `http://localhost:4200`
+
+## 📁 Project Structure
 
 ```
 project/
-├── front/          # Angular frontend
-│   ├── src/       # Source code
-│   ├── assets/    # Static assets
+├── Front-end/          # Angular frontend
+│   ├── src/           # Source code
+│   │   ├── app/       # Application components
+│   │   ├── assets/    # Static assets
+│   │   └── ...
 │   └── ...
-└── back/          # Node.js backend
-    ├── config/    # Configuration
-    ├── controllers/# Route controllers
-    ├── models/    # Database models
-    ├── routes/    # API routes
+└── Back-end/          # Node.js backend
+    ├── config/        # Configuration files
+    ├── controllers/   # Route controllers
+    ├── models/        # Database models
+    ├── routes/        # API routes
+    ├── public/        # Public assets
     └── ...
 ```
 
-## Prerequisites
+## 🔒 Environment Variables
 
-- Node.js (v14 or higher)
-- npm (comes with Node.js)
-- Angular CLI:
-  ```bash
-  npm install -g @angular/cli
-MongoDB:
+Create a `.env` file in the Back-end directory with the following variables:
 
-Download and install: https://www.mongodb.com/try/download/community
+```env
+PORT=3000
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+```
 
-Make sure it's running 
+## 📝 API Documentation
 
-Setup
-1. Clone the Project
-   git clone https://your-repo-url.git
-   cd project
-2. Backend Setup
-  cd back
-  npm install
+The API documentation is available at `http://localhost:3000/api-docs` when the backend server is running.
 
-Start the backend:
-node server
+## 🤝 Contributing
 
-3. Frontend Setup
-Open a new terminal:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-cd front
-npm install
-ng serve
-The frontend will run at http://localhost:4200 and connect to the backend 
+## 📄 License
 
-That's it! Now your app is up and running.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- **Med Aziz Ouerfelli** - *Initial work* - [GitHub](https://github.com/MedAzizOuerfelli)
+
+## 🙏 Acknowledgments
+
+- Thanks to all contributors who have helped shape this project
+- Special thanks to the open-source community for their amazing tools and libraries
