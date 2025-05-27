@@ -1,6 +1,6 @@
 # Ignore nested Git repositories
-Back-end/
-Front-end/
+# Back-end/
+# Front-end/
 
 # Common files to ignore
 .DS_Store
